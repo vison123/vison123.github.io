@@ -3,13 +3,11 @@ layout: post
 title:  ReactNative Flux模式
 date:   2016-04-05 01:08:00 +0800
 categories: ReactNative
-tag: ReactNative
+tag: 开发模式
 ---
 
 * content
 {:toc}
-
-# ReactNative Flux模式
 
 接触ReactNative也有一年多的时间了，从最开始的硬编码数据管理混乱，到Flux的单向数据流，以及后来的Redux我们都有尝试过。硬编码自不用说，不同模块的同事完全按照自己的想法进行编码，界面以及效果出来就行，后期BUG修改以及交接工作就遇上了大问题。代码可读性差，没有统一的逻辑，针对这些问题我们开始引入Flux，使应用更易于开发和维护。
 
