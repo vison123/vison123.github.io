@@ -44,7 +44,7 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
  Store 更新后，发出一个"change"事件
 
  View 收到"change"事件后，更新页面
-{% highlight bash %}
+{% endhighlight %}
 
 ## 优缺点
 没有哪一种模式是完美的，只是看牺牲了哪些性能又带来了哪些便利。Flux也不例外，也有一些优缺点：
@@ -54,7 +54,7 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
  移植现有代码比较困难，之前做过迁移，相当于重写业务逻辑；
 
  单元测试难以进行，在Flux中，组件开始依赖ActionCreators以及Store，以及其他的依赖项目，这将使得编写单元测试异常复杂
-{% highlight bash %}
+{% endhighlight %}
 
 
 
