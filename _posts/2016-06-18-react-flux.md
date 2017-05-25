@@ -13,11 +13,12 @@ tag: 开发模式
 
 ## Flux框架的结构
 主要有以下四大组成部分：
-
+{% highlight bash %}
 * View(视图层)： 界面显示，业务逻辑;
 * Action(动作)：视图层发出的消息(比如mouseClick);
 * Dispatcher(转发器)：用来接收Actions、执行回调函数;
 * Store(数据层)：用来存放应用的状态，一旦发生变动，就提醒Views要更新页面;
+{% endhighlight %}
 
 
 ![](http://img.blog.csdn.net/20160823082435287?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
