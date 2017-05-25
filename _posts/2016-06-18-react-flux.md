@@ -37,13 +37,13 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
 整个完整流程主要有以下几个步骤：
 
 {% highlight bash %}
-* View触发一个方法产生一个Action
+ 1. View触发一个方法产生一个Action
 
-* Dispatcher 收到 Action，要求 Store 进行相应的更新
+ 2. Dispatcher 收到 Action，要求 Store 进行相应的更新
 
-* Store 更新后，发出一个"change"事件
+ 3. Store 更新后，发出一个"change"事件
 
-* View 收到"change"事件后，更新页面
+ 4. View 收到"change"事件后，更新页面
 {% highlight bash %}
 
 ## 优缺点
