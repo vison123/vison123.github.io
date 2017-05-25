@@ -37,23 +37,23 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
 整个完整流程主要有以下几个步骤：
 
 {% highlight bash %}
- 1. View触发一个方法产生一个Action
+ View触发一个方法产生一个Action
 
- 2. Dispatcher 收到 Action，要求 Store 进行相应的更新
+ Dispatcher 收到 Action，要求 Store 进行相应的更新
 
- 3. Store 更新后，发出一个"change"事件
+ Store 更新后，发出一个"change"事件
 
- 4. View 收到"change"事件后，更新页面
+ View 收到"change"事件后，更新页面
 {% highlight bash %}
 
 ## 优缺点
 没有哪一种模式是完美的，只是看牺牲了哪些性能又带来了哪些便利。Flux也不例外，也有一些优缺点：
 {% highlight bash %}
-* 单向数据流使代码编写更加模块化；
+ 单向数据流使代码编写更加模块化；
 
-* 移植现有代码比较困难，之前做过迁移，相当于重写业务逻辑；
+ 移植现有代码比较困难，之前做过迁移，相当于重写业务逻辑；
 
-* 单元测试难以进行，在Flux中，组件开始依赖ActionCreators以及Store，以及其他的依赖项目，这将使得编写单元测试异常复杂
+ 单元测试难以进行，在Flux中，组件开始依赖ActionCreators以及Store，以及其他的依赖项目，这将使得编写单元测试异常复杂
 {% highlight bash %}
 
 
