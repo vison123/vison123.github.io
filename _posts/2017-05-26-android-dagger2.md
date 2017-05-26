@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Android Dagger
+title:  Android Dagger2
 date:   2017-04-26 01:08:00 +0800
 categories: Android
 tag: Android
@@ -55,8 +55,9 @@ apply plugin: 'android-apt'
 
 dependencies代码块中添加Dagger2的依赖关系
 
-//使用APT生成工具，生成需要的DI代码
+
 {% highlight bash %}
+//使用APT生成工具，生成需要的DI代码
 apt 'com.google.dagger:dagger-compiler:2.5'
 //JSR250的jar包，使用这个和使用glassFish的那个一样，仅为了使用@Inject 和@Named注解
 provided 'javax.annotation:jsr250-api:1.0'
