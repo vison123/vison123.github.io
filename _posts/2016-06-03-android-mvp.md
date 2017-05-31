@@ -18,7 +18,14 @@ MVC可以说是一种理念但绝不是一个可以直接应用的架构，对An
 * View: 对应于Layout布局文件
 * Controller: 对应于Activity 
 
+![](http://upload-images.jianshu.io/upload_images/1233754-5f7d98f12dc2496d.png!web?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 看起来的确像那么回事，但是细细的想想这个View对应于布局文件，其实能做的事情特别少，实际上关于该布局文件中的数据绑定的操作，事件处理的代码都在Activity中，造成了Activity既像View又像Controller。最终结果就是Activity好像承担了MVC中的所有角色，导致界面交互、业务逻辑、网络请求全部杂糅在一起，代码极难维护。
+
+当应用逐渐变大以后业务逻辑以及界面交互混杂在一起以后，就会出现Activity越来越庞大，处理的逻辑越来越多，最后结果就是：
+
+![](http://upload-images.jianshu.io/upload_images/1233754-41f3e3d839c950fc.png!web?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 使用MVP以后
 Presenter的出现，将Actvity视为View层，Model层视为业务逻辑层，Presenter负责完成View层与Model层的交互。
@@ -27,5 +34,8 @@ Presenter的出现，将Actvity视为View层，Model层视为业务逻辑层，P
 * View: 对应于Activity，负责View的绘制以及与用户交互
 * Presenter: 负责完成View于Model间的交互
 
-![]()
+![](http://upload-images.jianshu.io/upload_images/1233754-eb5b4bc4fbf757be.png!web?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+# 遵循原则
+
 
