@@ -6,7 +6,7 @@ categories: Java
 tag: 上传下载
 ---
 
-＃后端
+## 后端实现
 {% highlight bash %}
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="utf-8" />
@@ -45,7 +45,7 @@ public class ImportExcelController {
 }
 {% endhighlight %}
 
-＃前端
+## 前端测试
 
 {% highlight bash %}
 <!DOCTYPE html>
