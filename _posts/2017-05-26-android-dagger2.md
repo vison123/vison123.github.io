@@ -10,7 +10,7 @@ tags:
 ---
 
 
-# 使用方法
+# 添加依赖
 
 在项目根目录下的build.gradle中的dependencies代码块中加入依赖:
 
