@@ -3,7 +3,7 @@
 > Yet another man.
 
 
-Hey，我是韦森，前端工程师，擅长React-Native，React.js 以及Android原生开发
+Hey，我是韦森，前端工程师，主要从事React-Native，React.js 以及Android原生开发
 
 ##### Talks
 
