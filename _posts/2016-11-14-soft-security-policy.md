@@ -2,7 +2,7 @@
 layout: post
 title:  前后端安全策略以及防治措施
 date:   2016-11-14 01:08:00 +0800
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-rwd.jpg"
 author:  "Vison"
 catalog: true
 tags:

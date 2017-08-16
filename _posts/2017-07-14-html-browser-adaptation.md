@@ -2,7 +2,7 @@
 layout: post
 title:  html浏览器适配
 date:   2017-07-14 01:08:00 +0800
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-rwd.jpg"
 author:     "Vison"
 catalog: true
 tags:
