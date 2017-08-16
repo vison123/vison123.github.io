@@ -9,15 +9,8 @@ tags:
     - Android
 ---
 
----
-layout: post
-title:  Android Dagger2
-date:   2017-04-26 01:08:00 +0800
-categories: Android
-tag: Android
----
 
-* 使用方法
+# 使用方法
 
 在项目根目录下的build.gradle中的dependencies代码块中加入依赖:
 
