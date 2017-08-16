@@ -1,37 +1,52 @@
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ page.title | append: ' - ' |append: site.name }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords"  content="{{ site.keyword }}">
+    <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
+    
+    <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
-	<link rel="shortcut icon" href="{{ '/styles/images/favicon.jpg' | prepend: site.baseurl }}">
-	<link rel="icon" href="{{ '/styles/images/favicon.jpg' | prepend: site.baseurl }}">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
 
-	<link rel="stylesheet" href="{{ '/styles/css/index.css' | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ '/styles/css/fontawesome/css/font-awesome.min.css' | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ '/styles/css/syntax.css' | prepend: site.baseurl }}">
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ '/feed.xml' | prepend: site.baseurl }}">
-	
-	<meta name="keywords" content="{{ page.title | append: ', ' | append: site.name | append: ', ' | append: site.meta_description}}">
-	<meta name="description" content="{{site.meta_description}}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-	<script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
-	<!--[if lt IE 9]>
-    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  	<![endif]-->
-  	<script>
-		var _hmt = _hmt || [];
-		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "//hm.baidu.com/hm.js?{{ site.baidu_analysis }}";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
-  	<style type="text/css">
-	  	.docs-content{
-	  		margin-bottom: 10px;
-	  	}
-  	</style>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | prepend: site.baseurl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>

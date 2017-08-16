@@ -1,13 +1,15 @@
 ---
 layout: post
 title:  Android MVP模式
-date:   2017-04-26 01:08:00 +0800
-categories: Android
-tag: 开发模式
+date:   2017-04-26 01:08:00 +0800
+header-img: "img/post-bg-2015.jpg"
+author:  "Vison"
+catalog: true
+tags:
+    - Android
+    - 开发模式
 ---
 
-* content
-{:toc}
 
 对于MVP（Model View Presenter）模式，做Android的小伙伴应该都不陌生，可以说是基于MVC的一个变种。利用接口将Model和View完全解耦，将业务逻辑完全剥离出来。使用MVP模式做过一个项目，就业务逻辑的抽离以及可维护性来说是一次非常好的体验。
 

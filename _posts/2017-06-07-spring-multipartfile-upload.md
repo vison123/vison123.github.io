@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  SpringMVC 上传文件
-date:   2017-04-26 01:08:00 +0800
-categories: Java
-tag: 上传下载
+date:   2017-04-26 01:08:00 +0800
+header-img: "img/post-bg-2015.jpg"
+author:     "Vison"
+catalog: true
+tags:
+    - 上传下载
 ---
-
-* content
-{:toc}
 
 ## 后端实现
 

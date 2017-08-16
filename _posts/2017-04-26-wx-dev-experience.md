@@ -2,12 +2,12 @@
 layout: post
 title:  微信小程序开发总结
 date:   2017-04-26 01:08:00 +0800
-categories: 微信小程序
-tag: 微信小程序
+header-img: "img/post-bg-2015.jpg"
+author:     "Vison"
+catalog: true
+tags:
+    - 微信小程序
 ---
-
-* content
-{:toc}
 
 
 小程序开发技术介绍

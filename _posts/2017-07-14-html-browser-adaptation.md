@@ -1,12 +1,16 @@
 ---
 layout: post
 title:  html浏览器适配
-date:   2017-07-14 01:08:00 +0800
-categories: Html
-tag: Html
+date:   2017-04-26 01:08:00 +0800
+header-img: "img/post-bg-2015.jpg"
+author:     "Vison"
+catalog: true
+tags:
+    - Html
 ---
 
-html浏览器适配
+
+## html浏览器适配
 
 <!--[if lt IE9]> 
 <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>

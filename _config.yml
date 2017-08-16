@@ -1,39 +1,89 @@
 # Site settings
-name: Vison's Blog
-email: sen_wei@163.com
-author: WeiSen
-url: http://vison123.github.io
-resume_site: http://vison123.github.io
-github: https://github.com/vison123/
-baseurl: ""
-description: Actually, less is more!
-meta_description: 为森;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
-motto: It's our wits that make us men.
-banner: 学而不思则罔，思而不学则殆。
+title: Vison's Blog
+SEOTitle: 韦森的博客 | Vison's Blog
+header-img: img/home-bg.jpg
+email: 723855399@qq.com
+description: "关于前端与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
+keyword: "韦森, Vison, 前端, App, React, ReactNative, 博客, 个人网站, 互联网"
+url: "https://visonsoft.cn"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-#permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/:title/
-paginate: 10
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-github_username: vison123
-highlighter: rouge
+# SNS settings
+RSS: false
+weibo_username:     vison
+zhihu_username:     vison
+github_username:    vison123
+twitter_username:   vison
+#facebook_username:  huxpro
+# linkedin_username:  firstname-lastname-idxxxx
+
+
 
 # Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
-FB:
-  comments :
-    provider : duoshuo
-    duoshuo:
-        short_name : vison
-    disqus :
-        short_name : vison
-    # facebook :
-    #   appid : 123
-    #   num_posts: 5
-    #   width: 580
-    #   colorscheme: light
+# Netease setttings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "开心敲代码，开心生活，<br>做一个能改变世界的程序员"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "Alcat洋",
+        href: "https://github.com/alcat2008"
+    }
+]
