@@ -82,8 +82,4 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "Alcat洋",
-        href: "https://github.com/alcat2008"
-    }
 ]
