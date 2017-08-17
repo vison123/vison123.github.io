@@ -9,7 +9,7 @@ tags:
     - 上传下载
 ---
 
-# 后端实现
+### 后端实现
 
 SpringMVC 用的是 的MultipartFile来进行文件上传 所以我们首先要配置MultipartResolver:用于处理表单中的file
 
@@ -55,7 +55,7 @@ public class ImportExcelController {
 }
 {% endhighlight %}
 
-# 前端测试
+### 前端测试
 
 注意要在form标签中加上enctype="multipart/form-data"表示该表单是要处理文件的,这是最基本的东西
 如果需要多选，只需多个type="file"的input即可

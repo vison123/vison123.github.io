@@ -13,7 +13,7 @@ tags:
 
 对于MVP（Model View Presenter）模式，做Android的小伙伴应该都不陌生，可以说是基于MVC的一个变种。利用接口将Model和View完全解耦，将业务逻辑完全剥离出来。使用MVP模式做过一个项目，就业务逻辑的抽离以及可维护性来说是一次非常好的体验。
 
-# 传统MVC模式
+### 传统MVC模式
 MVC可以说是一种理念但绝不是一个可以直接应用的架构，对Android代码来说，MVC的对应关系如下所示：
 
 * Model: 业务逻辑和实体模型
@@ -29,7 +29,7 @@ MVC可以说是一种理念但绝不是一个可以直接应用的架构，对An
 
 ![](http://upload-images.jianshu.io/upload_images/1233754-41f3e3d839c950fc.png!web?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# 使用MVP以后
+### 使用MVP以后
 Presenter的出现，将Actvity视为View层，Model层视为业务逻辑层，Presenter负责完成View层与Model层的交互。
 
 * Model: 依然是业务逻辑和实体模型
@@ -38,6 +38,6 @@ Presenter的出现，将Actvity视为View层，Model层视为业务逻辑层，P
 
 ![](http://upload-images.jianshu.io/upload_images/1233754-eb5b4bc4fbf757be.png!web?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# 遵循原则
+### 遵循原则
 
 
