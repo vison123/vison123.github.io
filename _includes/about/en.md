@@ -5,6 +5,8 @@
 
 Hey，我是韦森，前端工程师，主要从事React-Native，React.js 以及Android原生开发
 
+Email: 723855399@qq.com
+
 ##### Talks
 
 - [Upgrading to Progressive Web Apps][9] · [JSConf China Shanghai 2017](http://2017.jsconf.cn/)
