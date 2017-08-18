@@ -52,9 +52,26 @@ layout: default
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Side Catalog Container -->
+            {% if page.catalog %}
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 post-container">
 
@@ -95,28 +112,11 @@ layout: default
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 评论框 end -->
                 {% endif %}
-            </div>  
-
-    <!-- Side Catalog Container -->
-        {% if page.catalog %}
-            <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container">
-                <div class="side-catalog">
-                    <hr class="hidden-sm hidden-xs">
-                    <h5>
-                        <a class="catalog-toggle" href="#">CATALOG</a>
-                    </h5>
-                    <ul class="catalog-body"></ul>
-                </div>
             </div>
-        {% endif %}
 
     <!-- Sidebar Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-8 col-lg-offset-3
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
