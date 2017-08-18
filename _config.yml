@@ -63,7 +63,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "开心敲代码，开心生活，<br>做一个能改变世界的程序员"
+sidebar-about-description: "开心敲代码，开心生活，<br>做一个积极乐观的程序员"
 sidebar-avatar: /img/avatar-vison.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
