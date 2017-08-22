@@ -19,6 +19,7 @@ tags:
 
 载入后，初始化新标签的CSS：主要是让这些html5标签成块状，像div那样。
 {% highlight bash %} 
-article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+article,aside,dialog,footer,header,section,
+footer,nav,figure,menu{display:block}
 {% endhighlight %}
 
