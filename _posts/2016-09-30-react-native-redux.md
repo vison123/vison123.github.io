@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  ReactNative Redux模式
-date:   2017-09-30 01:08:00 +0800
+date:   2016-09-30 01:08:00 +0800
 header-img: "img/post-bg-rwd.jpg"
 author:  "Vison"
 catalog: true
