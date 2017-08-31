@@ -9,7 +9,7 @@ tags:
     - Html
 ---
 
-#### h5标签向下兼容
+### h5标签向下兼容
 
 {% highlight bash %} 
 <!--[if lt IE9]> 
@@ -25,7 +25,7 @@ article,aside,dialog,footer,header,section,
 footer,nav,figure,menu{display:block}
 {% endhighlight %}
 
-#### CSS Reset
+### CSS Reset
 CSS重设就是由于各种浏览器解释CSS样式的初始值有所不同，导致设计师在没有定义某个CSS属性时，不同的浏览器会按照自己的默认值来为没有定义的样式赋值，所以我们要先定义好一些CSS样式，来让所有浏览器都按照同样的规则解释CSS，这样就能避免发生这种问题。
 * 最简化的CSS Reset
 
