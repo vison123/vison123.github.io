@@ -77,8 +77,8 @@ table {
 }
 ```
 * YUI CSS Reset
-```
 To use CSS Reset, include the following source file in your web page header:
+```
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 ```
 
