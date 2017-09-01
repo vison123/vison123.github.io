@@ -30,7 +30,7 @@ CSS重设就是由于各种浏览器解释CSS样式的初始值有所不同，�
 * 最简化的CSS Reset
 
 {% highlight bash %} 
-* {padding: 0;margin: 0;}
+ {padding: 0;margin: 0;}
 {% endhighlight %}
 
 * meyerweb.com CSS Reset
