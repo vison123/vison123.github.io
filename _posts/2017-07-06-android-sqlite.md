@@ -12,6 +12,41 @@ tags:
 
 ### 创建数据库
 
+{% highlight bash %}
+public class SqLiteHelper extends SQLiteOpenHelper {
+
+
+    private static final String DATABASE_NAME  = "finance.db"; //数据库名称
+
+    private static final int DATABASE_VERSION  = 1; //数据库版本
+
+    public SqLiteHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    //实现方法  是一个回调方法
+    //在创建数据库时调用
+    //什么时候创建数据库：连接数据库的时候，如果数据库文件不存在
+    //只调用一次
+    public void onCreate(SQLiteDatabase db) {
+        createTable(db);
+    }
+
+    //升级数据库
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // 数据库升级要保证数据不会丢失
+    }
+
+    private void createTable (SQLiteDatabase db) {
+        db.execSQL(DbProject.CREATE_PROJECT_TABLE);
+        db.execSQL(DbCategory.CREATE_CATEGORY_TABLE);
+        db.execSQL(DbMoney.CREATE_MONEY_TABLE);
+    }
+
+}
+{% endhighlight %}
+
 ### 升级数据库
   数据库升级主要有两种情况：
    * 从未安装过该App
