@@ -10,6 +10,11 @@ tags:
     - Android
 ---
 
+### SQLite简介
+SQLite是一款轻量级的关系型数据库。支持标准的SQL语法，还遵循数据库的ACID事务。相比较Realm等数据库，我更倾向于SQLite，大多数开发者
+对SQL语法较为熟悉，上手较快。另一方面，Realm数据库虽然较为轻量，但在事务方面的表现不如SQLite，Android又在SDK中集成了SQLite，
+使用起来不需要额外依赖。所以至少在Android平台上，SQLite数据库是第一选择。
+
 ### 创建数据库
 
 {% highlight bash %}
