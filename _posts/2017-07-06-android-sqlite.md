@@ -91,10 +91,21 @@ public class SqLiteHelper extends SQLiteOpenHelper {
      执行SQLitehelper 中的onUpgrade()方法, 同样进行循环升级；
 
 ### 备份数据库
-  * 修改表名为临时表；
-  * 创建新表；
-  * 将临时表数据插入到新表（新增字段用空格表示）；
-  * 在新表中更新新增字段（根据条件update或直接给出默认值）；
+   如果遇到复杂的修改操作，比如在修改的同时，需要进行数据的转移，那么可以采取在一个事务中执行如下语句来实现修改表的需求。
+　　* 将表名改为临时表
+         ALTER TABLE t_project RENAME TO t_temp_project;
+
+　　* 创建新表
+        CREATE TABLE t_project (OrderId VARCHAR(32) PRIMARY KEY ,UserName VARCHAR(32) NOT NULL ,ProductId VARCHAR(16) NOT NULL);
+　　
+   * 导入数据
+        INSERT INTO t_project SELECT OrderId, “”, ProductId FROM t_temp_project;
+　       (注意 双引号”” 是用来补充原来不存在的数据的)
+　　
+    * 删除临时表　　
+        DROP TABLE t_temp_project;
+        
+通过以上四个步骤，就可以完成旧数据库结构向新数据库结构的迁移，并且其中还可以保证数据不会应为升级而流失。
   
 ### 提升数据库版本号
   数据库版本若没有提升到最新，下次启动应用还会进行升级，影响效率及对数据库数据造成影响
