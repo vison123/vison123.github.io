@@ -92,17 +92,18 @@ public class SqLiteHelper extends SQLiteOpenHelper {
 
 ### 备份数据库
    如果遇到复杂的修改操作，比如在修改的同时，需要进行数据的转移，那么可以采取在一个事务中执行如下语句来实现修改表的需求。
-　　* 将表名改为临时表
+   
+   * 将表名改为临时表
          ALTER TABLE t_project RENAME TO t_temp_project;
 
-　　* 创建新表
+   * 创建新表
         CREATE TABLE t_project (OrderId VARCHAR(32) PRIMARY KEY ,UserName VARCHAR(32) NOT NULL ,ProductId VARCHAR(16) NOT NULL);
 　　
    * 导入数据
         INSERT INTO t_project SELECT OrderId, “”, ProductId FROM t_temp_project;
 　       (注意 双引号”” 是用来补充原来不存在的数据的)
 　　
-    * 删除临时表　　
+   * 删除临时表　　
         DROP TABLE t_temp_project;
         
 通过以上四个步骤，就可以完成旧数据库结构向新数据库结构的迁移，并且其中还可以保证数据不会应为升级而流失。
