@@ -188,7 +188,8 @@ tags:
 调息是由于国家对存贷款利率进行调整，主要是为了控制物价、房价等。在央行发布调息利率以后，租赁公司可以选择根据央行基准利率进行调整，确定调息日进而将租金
 在调息日以后的资金占用采用新的利率计算，进而影响租金。算法选择根据租金测算表中涉及调息字段决定，算法选择规则如下图所示：
 
-![](/img/in-post/post-rent-quotation/adjust-interest.png)
+![](/img/in-post/post-rent-quotation/adjust-interest.png
+)
 
 ## 参考资料
 * [pmt算法推导](https://wenku.baidu.com/view/b25ff654f01dc281e53af089.html)
