@@ -21,10 +21,21 @@ tags:
   
 #### Gem安装更新
 
-  Gem是Ruby第三方插件管理器，Ruby环境自带，查看到版本号后可以更新到最新版本
+  Gem是Ruby第三方插件管理器，是后面安装Jekyll时用到的，Ruby环境自带，查看到版本号后可以更新到最新版本。注意更新需要翻墙，否则会出现404错误。
   ```
   检查gem版本
   gem -v
   更新Gem(提示权限)
-  gem update --system
+  sudo gem update --system
+  ```
+  更新命令如果不加sudo会出现报错，You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+  
+#### 安装jekyll
+
+这时候上面安装的Gem就派上用场了，
+  ```
+    安装jekyll(提示权限)
+    $ gem install jekyll
+    安装成功之后，查看版本号
+    $ jekyll -v
   ```
