@@ -29,10 +29,10 @@ tags:
   如果翻墙还是更新不了的话，那只能换成国内的源了，换源后重新执行更新命令即可：
   
   ```
-      检查gem版本
-      gem -v
-      更新Gem(提示权限)
-      sudo gem update --system
+    检查gem版本
+    $ gem -v
+    更新Gem(提示权限)
+    $ sudo gem update --system
 
     $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
     $ gem sources -l
@@ -44,7 +44,7 @@ tags:
   
 #### 安装jekyll
 
-这时候上面安装的Gem就派上用场了
+这时候上面安装的Gem就派上用场了，到这一步基本不会有报错，会很快下载完
 
   ```
     安装jekyll(提示权限)
@@ -52,4 +52,36 @@ tags:
     安装成功之后，查看版本号
     $ jekyll -v
   ```
+  
+ #### 使用jekyll
+ 
+ jekyll安装成功以后就可以使用jekyll了，可以自己根据Jekyll规则自己搭建个人网站或博客。当然网上有很多模版，如果没太多时间自己设计的话，
+ 可以直接使用网上的模版[Jekyll Themes](http://jekyllthemes.org/)。
+ 
+ 我使用的模版是[Huxpro 提供的模版](https://github.com/Huxpro/huxpro.github.io),
+ 感谢[Huxpro 提供的模版](https://github.com/Huxpro）
+ 
+ 下载模版并修改风格后，可以在本地运行 jekyll serve即可
+ 
+ #### GithubPages
+ 
+GithubPages: Websites for you and your projects.
+Hosted directly from your GitHub repository. Just edit, push, and your changes are live.
+
+GitHub 提供了一种功能，叫 GitHub Pages, 利用这个功能，我 们可以为项目建立网站，当然，这也意味着我们可以通过 GitHub Pages 建立自己的网站。
+GitHub Pages 直接支持Jekyll,使用 GitHub 和 Jekyll，我们可以打造自己的独立博客，可以自由地定制网站的风格，并且这一切都是免费的。
+
+在自己的github中新建项目，例如我的用户名是vison123，那么则新建项目vison123.github.io项目，将本地搭建的jekyll项目push到该仓库，会触发github自动构建，构建失败邮箱会收到提醒。
+若成功，则打开http://vison123.github.io 即可访问该jekyll项目。
+
+ #### 绑定域名
+  若是想将域名绑定在你github.io项目根目录下新建一个文件，文件名为CNAME，将你要绑定的域名写在文件中。比如我要绑定visonsoft.cn域名，
+  那就在文件中就写一行“visonsoft.cn”。
+  
+  然后在域名解析中进行配置，如下图所示：
+  
+  
+  配置生效后即可通过域名访问自己的GithubPages
+
+ 
   
