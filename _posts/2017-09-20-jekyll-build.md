@@ -78,9 +78,11 @@ GitHub Pages 直接支持Jekyll,使用 GitHub 和 Jekyll，我们可以打造自
   那就在文件中就写一行“visonsoft.cn”。
   
   然后在域名解析中进行配置，如下图所示：
-  
-  
+ ![](/img/in-post/post-jekyll-build/cname-resolve.png)
+
+
   配置生效后即可通过域名访问自己的GithubPages
+  ![](/img/in-post/post-jekyll-build/visonsoft.cn.png)
 
  
   
