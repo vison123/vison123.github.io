@@ -49,10 +49,10 @@ API接口调试工具，可以模拟Get、Post网络请求，开发利器；
 
 #### Genymotion
 
-效果非常好的一款Android模拟器，不是一般的快；请注意翻墙，不然登陆和下载模拟器是个大问题
-[安装指南](https://wenku.baidu.com/view/b25ff654f01dc281e53af089.html)
-要先安装Virtual Box，然后再进行安装，安装后要进行登陆，在Account下选择Personal Use，然后进行模拟器下载；
-模拟器下载就算翻墙也经常断掉，可以进行模拟器的拷贝，拷贝/Users/vison/.Genymobile/Genymotion下的deployed和ova目录，
-这时候会发现还是看不见模拟器，这时候并不是没有拷贝成功，再add拷贝的模拟器就会直接安装不用下载了。
+* 效果非常好的一款Android模拟器，不是一般的快；请注意翻墙，不然登陆和下载模拟器是个大问题
+* [安装指南](http://www.jianshu.com/p/5bcd8eae486b)
+* 要先安装Virtual Box，然后再进行安装，安装后要进行登陆，在Account下选择Personal Use，然后进行模拟器下载；
+* 模拟器下载就算翻墙也经常断掉，可以进行模拟器的拷贝，拷贝/Users/vison/.Genymobile/Genymotion下的deployed和ova目录；
+* 这时候会发现还是看不见模拟器，这时候并不是没有拷贝成功，再add拷贝的模拟器就会直接安装不用下载了,直接start即可；
 
 
