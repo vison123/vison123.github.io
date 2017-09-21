@@ -11,14 +11,15 @@ tags:
 
 之前一直没有好好整理写的一些笔记，只是存放在本地markdowm，查找和分享都不是很方便。前段时间工作不是很忙所以有空在本地搭建了Jekyll的环境，
 然后推到github.io上去。这不得不夸一下github了，对jekyll的支持以及自动构建完全不用我们做多余的操作。最方便的一点就是写文章更加方便了，
-我只需要一个浏览器。建议大家不妨试一下github.io+Jekyll来搭建自己的个人博客。
+只需要一个浏览器，把零碎时间利用起来。建议大家不妨试一下github.io + Jekyll来搭建自己的个人博客。
 
 ## Jekyll环境搭建
 
 #### Ruby环境
 
   Mac自带Ruby环境，其他操作系统请自行百度。
-  
+  Jekyll Requires Ruby version >= 2.1， 如不满足需要先安装更新，[Ruby更新教程](http://www.jianshu.com/p/d99b5662d8a0)
+  
 #### Gem安装更新
 
   Gem是Ruby第三方插件管理器，是后面安装Jekyll时用到的，Ruby环境自带，查看到版本号后可以更新到最新版本。注意更新需要翻墙，否则会出现404错误。
@@ -29,7 +30,16 @@ tags:
   sudo gem update --system
   ```
   更新命令如果不加sudo会出现报错，You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
-  
+  
+  如果翻墙还是更新不了的话，那只能换成国内的源了，换源后重新执行更新命令即可：
+    ```
+    $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+    $ gem sources -l
+    *** CURRENT SOURCES ***
+
+    https://gems.ruby-china.org
+    请确保只有 gems.ruby-china.org
+  ```
 #### 安装jekyll
 
 这时候上面安装的Gem就派上用场了，
@@ -39,3 +49,4 @@ tags:
     安装成功之后，查看版本号
     $ jekyll -v
   ```
+  
