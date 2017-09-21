@@ -58,8 +58,7 @@ tags:
  jekyll安装成功以后就可以使用jekyll了，可以自己根据Jekyll规则自己搭建个人网站或博客。当然网上有很多模版，如果没太多时间自己设计的话，
  可以直接使用网上的模版[Jekyll Themes](http://jekyllthemes.org/)。
  
- 我使用的模版是[Huxpro 提供的模版](https://github.com/Huxpro/huxpro.github.io),
- 感谢[Huxpro 提供的模版](https://github.com/Huxpro）
+ 我使用的模版是[Huxpro 提供的模版](https://github.com/Huxpro/huxpro.github.io),感谢[Huxpro](https://github.com/Huxpro);
  
  下载模版并修改风格后，可以在本地运行 jekyll serve即可
  
