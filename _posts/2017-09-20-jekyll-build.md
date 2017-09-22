@@ -13,8 +13,6 @@ tags:
 然后推到github.io上去。这不得不夸一下github了，对jekyll的支持以及自动构建完全不用我们做多余的操作。最方便的一点就是写文章更加方便了，
 只需要一个浏览器，把零碎时间利用起来。建议大家不妨试一下github.io + Jekyll来搭建自己的个人博客。
 
-## Jekyll环境搭建
-
 #### Ruby环境
 
   Mac自带Ruby环境，其他操作系统请自行百度。
@@ -41,7 +39,6 @@ tags:
     https://gems.ruby-china.org
     请确保只有 gems.ruby-china.org
   ```
-  
 #### 安装jekyll
 
 这时候上面安装的Gem就派上用场了，到这一步基本不会有报错，会很快下载完
@@ -53,7 +50,7 @@ tags:
     $ jekyll -v
   ```
   
- #### 使用jekyll
+#### 使用jekyll
  
  jekyll安装成功以后就可以使用jekyll了，可以自己根据Jekyll规则自己搭建个人网站或博客。当然网上有很多模版，如果没太多时间自己设计的话，
  可以直接使用网上的模版[Jekyll Themes](http://jekyllthemes.org/)。
@@ -64,16 +61,17 @@ tags:
  
  #### GithubPages
  
-GithubPages: Websites for you and your projects.
-Hosted directly from your GitHub repository. Just edit, push, and your changes are live.
+ GithubPages: Websites for you and your projects.
+ Hosted directly from your GitHub repository. Just edit, push, and your changes are live.
 
-GitHub 提供了一种功能，叫 GitHub Pages, 利用这个功能，我 们可以为项目建立网站，当然，这也意味着我们可以通过 GitHub Pages 建立自己的网站。
-GitHub Pages 直接支持Jekyll,使用 GitHub 和 Jekyll，我们可以打造自己的独立博客，可以自由地定制网站的风格，并且这一切都是免费的。
+ GitHub 提供了一种功能，叫 GitHub Pages, 利用这个功能，我 们可以为项目建立网站，当然，这也意味着我们可以通过 GitHub Pages 建立自己的网站。
+ GitHub Pages 直接支持Jekyll,使用 GitHub 和 Jekyll，我们可以打造自己的独立博客，可以自由地定制网站的风格，并且这一切都是免费的。
 
-在自己的github中新建项目，例如我的用户名是vison123，那么则新建项目vison123.github.io项目，将本地搭建的jekyll项目push到该仓库，会触发github自动构建，构建失败邮箱会收到提醒。
-若成功，则打开http://vison123.github.io 即可访问该jekyll项目。
+ 在自己的github中新建项目，例如我的用户名是vison123，那么则新建项目vison123.github.io项目，将本地搭建的jekyll项目push到该仓库，会触发github自  动构建，构建失败邮箱会收到提醒。
+ 若成功，则打开http://vison123.github.io 即可访问该jekyll项目。
 
- #### 绑定域名
+#### 绑定域名
+ 
   若是想将域名绑定在你github.io项目根目录下新建一个文件，文件名为CNAME，将你要绑定的域名写在文件中。比如我要绑定visonsoft.cn域名，
   那就在文件中就写一行“visonsoft.cn”。
   
