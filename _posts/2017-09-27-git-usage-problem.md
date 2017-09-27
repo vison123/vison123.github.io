@@ -118,7 +118,7 @@ git remote romove <repository> # 删除远程仓库
 #### Webstorm Git使用
 
 JetBrain出品的各种Idea已经成为非常流行的开发工具，也是我们现在正在使用的开发工具，所以掌握其git使用也是必须的。
-其中界面工具
+其中界面工具Log和Merge也要能够灵活使用，这些功能对与合并分支与解决冲突是有很大帮助的。
 
 ### Chrome调试
 
