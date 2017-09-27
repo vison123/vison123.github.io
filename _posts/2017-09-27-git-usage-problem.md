@@ -11,4 +11,6 @@ tags:
 
 ### Git的使用问题
 
+![Git图解](http://img3.imgtn.bdimg.com/it/u=4274308671,1169322449&fm=214&gp=0.jpg)
+
 ### Chrome调试
