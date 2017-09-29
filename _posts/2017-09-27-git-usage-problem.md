@@ -26,9 +26,9 @@ tags:
 
 #### Git常用命令
 
-```
-查看、添加、提交、删除、找回，重置修改文件
+* 查看、添加、提交、删除、找回，重置修改文件
 
+```
 git add <file> # 将工作文件修改提交到本地暂存区
 
 git add . # 将所有修改过的工作文件提交暂存区
@@ -40,17 +40,21 @@ git rm <file> --cached # 从版本库中删除文件，但不删除文件
 git revert <$id> # 恢复某次提交的状态，恢复动作本身也创建次提交对象
 
 git revert HEAD # 恢复最后一次提交的状态
+```
 
-查看文件diff
+* 查看文件diff
 
+```
 git diff <file> # 比较当前文件和暂存区文件差异 git diff
 
 git diff <id1><id1><id2> # 比较两次提交之间的差异
 
 git diff <branch1>..<branch2> # 在两个分支之间比较
 
-查看提交记录
+```
+* 查看提交记录
 
+```
 git log <file> # 查看该文件每次提交记录
 
 查看、切换、创建和删除分支
@@ -62,13 +66,16 @@ git co <branch> # 切换到某个分支
 git br -d <branch> # 删除某个分支
 
 git br -D <branch> # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
+```
+* 分支合并和rebase
 
- 分支合并和rebase
-
+```
 git merge <branch> # 将branch分支合并到当前分支
+```
 
- Git暂存管理
+* Git暂存管理
 
+```
 git stash # 暂存
 
 git stash list # 列所有stash
@@ -76,9 +83,10 @@ git stash list # 列所有stash
 git stash apply # 恢复暂存的内容
 
 git stash drop # 删除暂存区
+```
+* Git远程分支管理
 
-Git远程分支管理
-
+```
 git pull # 抓取远程仓库所有分支更新并合并到本地
 
 git fetch origin # 抓取远程仓库更新
@@ -97,8 +105,11 @@ git push origin <local_branch>:<remote_branch> # 创建远程分支
 
 git push origin :<remote_branch> #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
 
-Git远程仓库管理
+```
 
+* Git远程仓库管理
+
+```
 git remote -v # 查看远程服务器地址和仓库名称
 
 git remote show origin # 查看远程服务器仓库状态
@@ -112,10 +123,3 @@ git remote rename <old> <new> # 修改远程仓库地址
 git remote romove <repository> # 删除远程仓库
 
 ```
-
-#### Webstorm Git使用
-
-JetBrain出品的各种Idea已经成为非常流行的开发工具，也是我们现在正在使用的开发工具，所以掌握其git使用也是必须的。
-其中界面工具Log和Merge也要能够灵活使用，这些功能对与合并分支与解决冲突是有很大帮助的。应该掌握使用Webstorm git工具
-进行提交代码，解决冲突，合并分支，排查问题。
-![](/img/in-post/post-git-usage-problem/webstorm-git-log.png)
