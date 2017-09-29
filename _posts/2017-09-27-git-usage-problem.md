@@ -123,3 +123,11 @@ git remote rename <old> <new> # 修改远程仓库地址
 git remote romove <repository> # 删除远程仓库
 
 ```
+* Git submodule
+
+```
+git submodule add https://github.com/vison123/vison123.github.io.git framework  # 添加 submodule
+
+git submodule update --init --recursive # 初始化 submodule 代码
+
+```
