@@ -2,11 +2,12 @@
 layout: post
 title:  CSS Modules
 date:   2017-09-30 01:08:00 +0800
-header-img: "img/post-bg-rwd.jpg"
+header-img: "img/in-post/react.jpg"
 author:     "Vison"
 catalog: true
 tags:
     - CSS Modules
+    - React
 ---
 
 讲一下写这篇文章的背景，之前工作一直在围绕ReactNative Android原生以及后台，对React Web端接触的较少。对React和Redux以及ES6语法倒是较
@@ -16,11 +17,11 @@ Web端开发进行了一些实验和思考，在这个过程中发现对CSS Modu
 
 ### 什么是 CSS Modules？
 
-CSS Modules？是CSS吗？那你就错了，CSS Modules不是CSS，它只是将CSS中加入局部作用域和模块依赖。使得CSS能够应用到组件中去，并且将CSS的
-全局作用域改成局部作用域，这样组件样式之间就会进行隔离。样式文件形成局部作用域，和其他文件之间有相同的classname也不会互相影响。所以，
-CSS Modules只是一种CSS在组件编程中的一种解决方案。CSS Modules 能最大化地结合现有 CSS 和 JS 模块化能力，API 简洁到几乎零学习成本。
-发布时依旧编译出单独的 JS 和 CSS。它并不依赖于 React，只要你使用 Webpack，可以在 Vue/Angular等任何框架中使用。当然CSS 模块化的解决
-方案有很多，但CSS Modules是目前最好的 CSS 模块化解决方案之一。
+CSS Modules？是CSS吗？那你就错了，CSS Modules不是CSS，它只是将CSS中加入局部作用域和模块依赖。使用 JS 来管理样式依赖，使得CSS能够应用
+到组件中去，并且将CSS的全局作用域改成局部作用域，这样组件样式之间就会进行隔离。样式文件形成局部作用域，和其他文件之间有相同的classname也
+不会互相影响。所以，CSS Modules只是一种CSS在组件编程中的一种解决方案。CSS Modules 能最大化地结合现有 CSS 和 JS 模块化能力。发布时依旧
+编译出单独的 JS 和 CSS。它并不依赖于 React，只要你使用 Webpack，可以在 Vue/Angular等任何框架中使用。当然CSS 模块化的解决方案有很多，但
+CSS Modules是目前最好的 CSS 模块化解决方案之一。
 
 ### 如何产生局部作用域？
 
@@ -221,12 +222,11 @@ composes 还可以组合外部文件中的样式。
 
 CSS Modules 使用建议遵循如下原则：
 
-* 不使用选择器，只使用 class 名来定义样式
-* 不层叠、不嵌套多个 class，只使用一个 class 把所有样式定义好
-* style 文件中使用了 id 选择器，伪类，标签选择器等
-* 不要对一个元素使用多个 class
-* 使用 `composes` 组合来实现复用
+* 不使用选择器，只使用 class 名来定义样式；
+* 不层叠、不嵌套多个 class，只使用一个 class 把所有样式定义好；
+* style 文件中使用了 id 选择器，伪类，标签选择器等；
+* 不要对一个元素使用多个 class；
+* 使用 `composes` 组合来实现复用；
 
 作为一个CSS本来就不怎么熟练的开发者来说，前两项对我倒没声明大问题，但是CSS大神们可能就接受不了了。明明很简单就能定义出来，为什么要这么麻烦。
 这种做法可能会抛弃掉CSS中最精华的部分，但是这样会让CSS Modules更加简单易用，而且有一个缺点项目中class数量将成倍上升。
-

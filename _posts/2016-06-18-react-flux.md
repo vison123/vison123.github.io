@@ -2,7 +2,7 @@
 layout: post
 title:  ReactNative Flux模式
 date:   2016-06-18 01:08:00 +0800
-header-img: "img/post-bg-rwd.jpg"
+header-img: "img/in-post/react.jpg"
 author:  "Vison"
 catalog: true
 tags:
@@ -18,11 +18,11 @@ tags:
 主要有以下四大组成部分：
 {% highlight bash %}
  View(视图层)： 界面显示，业务逻辑;
- 
+
  Action(动作)：视图层发出的消息(比如mouseClick);
- 
+
  Dispatcher(转发器)：用来接收Actions、执行回调函数;
- 
+
  Store(数据层)：用来存放应用的状态，一旦发生变动，就提醒Views要更新页面;
 {% endhighlight %}
 
@@ -30,6 +30,18 @@ tags:
 ![](http://img.blog.csdn.net/20160823082435287?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 Flux存在多种实现，针对不同的业务场景可以进行适当的调整，适合自己的才是最好的。本文采用的是FaceBook官方的Flux框架。
+
+#### View
+
+
+#### Action
+
+
+#### Dispatcher
+
+
+#### Store
+
 
 ### 单向数据流
 
@@ -52,13 +64,13 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
 
 ### 优缺点
 没有哪一种模式是完美的，只是看牺牲了哪些性能又带来了哪些便利。Flux也不例外，也有一些优缺点：
-{% highlight bash %}
- 单向数据流使代码编写更加模块化；
 
- 移植现有代码比较困难，之前做过迁移，相当于重写业务逻辑；
+* 单向数据流使代码编写更加模块化；
 
- 单元测试难以进行，在Flux中，组件开始依赖ActionCreators以及Store，以及其他的依赖项目，这将使得编写单元测试异常复杂
-{% endhighlight %}
+* 移植现有代码比较困难，之前做过迁移，相当于重写业务逻辑；
+
+* 单元测试难以进行，在Flux中，组件开始依赖ActionCreators以及Store，以及其他的依赖项目，这将使得编写单元测试异常复杂；
+
 
 
 
