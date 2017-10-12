@@ -98,20 +98,22 @@ layout: default
                     {% endif %}
                 </ul>
 
-
-                {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                {% endif %}
-
-                {% if site.netease_comment %}
-                <!-- 网易云跟帖 评论框 start -->
-                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-                <!-- 网易云跟帖 评论框 end -->
-                {% endif %}
+                <!-- Gitment 评论 start -->
+                <div id="gitmentContainer"></div>
+                <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                    var gitment = new Gitment({
+                        owner: 'vison123',
+                        repo: 'https://github.com/vison123/vison123.github.io',
+                        oauth: {
+                            client_id: 'd91c9fa1e2f42d7d1bf4',
+                            client_secret: 'ed7db12faac3a52ce3ebea0362ce65508cdd9385'
+                        }
+                    })
+                    gitment.render('gitmentContainer')
+                </script>
+                <!-- Gitment 评论 end -->
             </div>
 
     <!-- Sidebar Container -->
@@ -149,22 +151,6 @@ layout: default
                 {% endif %}
             </div>
         </div>
-        <!-- Gitment 评论 start -->
-        <div id="gitmentContainer"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-        <script>
-            var gitment = new Gitment({
-                owner: 'vison123',
-                repo: 'https://github.com/vison123/vison123.github.io',
-                oauth: {
-                    client_id: 'd91c9fa1e2f42d7d1bf4',
-                    client_secret: 'ed7db12faac3a52ce3ebea0362ce65508cdd9385'
-                }
-            })
-            gitment.render('gitmentContainer')
-        </script>
-        <!-- Gitment 评论 end -->
     </div>
 </article>
 
