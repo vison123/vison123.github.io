@@ -149,25 +149,26 @@ layout: default
                 {% endif %}
             </div>
         </div>
+        <!-- Gitment 评论 start -->
+        <div id="gitmentContainer"></div>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+            var gitment = new Gitment({
+                owner: 'vison123',
+                repo: 'https://github.com/vison123/vison123.github.io',
+                oauth: {
+                    client_id: 'd91c9fa1e2f42d7d1bf4',
+                    client_secret: 'ed7db12faac3a52ce3ebea0362ce65508cdd9385'
+                }
+            })
+            gitment.render('gitmentContainer')
+        </script>
+        <!-- Gitment 评论 end -->
     </div>
 </article>
 
-<!-- Gitment 评论 start -->
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-        owner: 'vison123',
-        repo: 'https://github.com/vison123/vison123.github.io',
-        oauth: {
-            client_id: 'd91c9fa1e2f42d7d1bf4',
-            client_secret: 'ed7db12faac3a52ce3ebea0362ce65508cdd9385'
-        }
-    })
-    gitment.render('gitmentContainer')
-</script>
-<!-- Gitment 评论 end -->
+
 
 {% if site.anchorjs %}
 <!-- async load function -->
