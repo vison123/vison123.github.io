@@ -87,5 +87,6 @@ tags:
    刚开始我的博客并没有评论功能，主要是没找到好的工具，多说停止维护，其他插件如畅言有需要网站备案，可选方案变少，很多评论国外的一些
    评论插件又不是很方便使用和维护。无意中看到Gitment可以提供评论功能，并且使用issue来进行评论点赞的管理，只需要使用github账号登陆即可。
    现在博客中已经成功加入了评论功能，就是用Gitment实现的，使用方法参考[在Jekyll博客添加评论系统](https://wenku.baidu.com/view/b25ff654f01dc281e53af089.html)
-
+   加入评论的页面如下图所示：
+    ![](/img/in-post/post-jekyll-build/gitment.png)
 

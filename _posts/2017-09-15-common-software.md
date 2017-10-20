@@ -15,7 +15,7 @@ tags:
 
 很好用的一款取色软件，前端开发者必备；
 
-#### Postman、Soapui 
+#### Postman、Soapui
 
 API接口调试工具，可以模拟Get、Post网络请求，开发利器；
 
@@ -24,8 +24,7 @@ API接口调试工具，可以模拟Get、Post网络请求，开发利器；
 文本及Markdown编辑器；
 
 #### Charles
-
-非常好用的抓包工具，设置好代理以后对应用的请求进行监控，可以很快发现接口问题；
+非常好用的抓包工具，设置好代理以后对应用的请求进行监控，可以很快发现接口问题，[激活方法](http://www.jianshu.com/p/55a8c84e0f24)；
 
 #### Navicat、MySqlWorkbench
 
