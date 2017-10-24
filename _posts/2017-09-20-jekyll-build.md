@@ -59,7 +59,7 @@ tags:
 
  下载模版并修改风格后，可以在本地运行 jekyll serve即可
 
- #### GithubPages
+#### GithubPages
 
  GithubPages: Websites for you and your projects.
  Hosted directly from your GitHub repository. Just edit, push, and your changes are live.
