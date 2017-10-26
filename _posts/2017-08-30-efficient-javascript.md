@@ -16,7 +16,7 @@ JavaScript文件在Html中的加载和执行都会阻塞浏览器渲染页面，
 现在许多新版本的浏览器都允许并行下载JavaScript文件，也就是说script标签之间的资源下载不会互相影响。但是JavaScript文件下载过程仍然
 会阻塞其他资源的下载，比如图片。而且JavaScript文件还需要执行过程，这个过程仍然会阻塞界面渲染。因此尽可能将script标签放到body标签的底部：
     
-```
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +39,7 @@ JavaScript文件在Html中的加载和执行都会阻塞浏览器渲染页面，
 
 #### defer和async
 首先，看一下三种情况下浏览器对脚本解析的方式：
-```
+```javascript
 <script src="script.js"></script>
 <script async src="asyncscript.js"></script>
 <script defer src="defermyscript.js"></script>

@@ -27,7 +27,7 @@ CSS Modules是目前最好的 CSS 模块化解决方案之一。
 
 大家都知道CSS规则是全局的，CSS .class 选择器选取带有指定类 (class) 的元素，如果样式中出现两个相同命名的class选择器，他们将会互相影响。
 
-```
+```javascript
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,7 +59,7 @@ CSS Modules是目前最好的 CSS 模块化解决方案之一。
 
 上述例子是为了引发大家对CSS Modules的思考，下面就会对React中CSS Modules的解决方案进行分析。写了一个React组件如下：
 
-```
+```javascript
 import React from 'react';
 import { connect } from 'react-redux';
 import style from './index.css';
@@ -85,7 +85,7 @@ export default connect()(Home);
 ```
 组件中国年引用的样式文件index.css如下：
 
-```
+```javascript
 .title {
   size: 20px;
   text-align: center;
@@ -93,7 +93,7 @@ export default connect()(Home);
 ```
 该组件在项目中使用Webpack build以后界面元素如下所示：
 
-```
+```javascript
 .byzpuW3R6MEgvP-zXxPHu {
     size: 20px;
     text-align: center;
@@ -113,7 +113,7 @@ export default connect()(Home);
 https://github.com/css-modules/css-modules/blob/master/docs/get-started.md)，Browserify、JSPM、NodeJS等。
 我们使用的是 Webpack 的css-loader插件，比较容易使用，下面是一个Webpack 使用 css-loader的一个例子。
 
-```
+```javascript
 module.exports = {
   entry: __dirname + '/index.js',
   output: {
@@ -145,7 +145,7 @@ module.exports = {
 其实使用了 CSS Modules 后，就相当于给每个 class 名外加加了一个 `:local`，以此来实现样式的局部化，如果你想切换到全局模式，使用对应的 `:global`。
 使用:global(.className)的语法，声明一个全局规则，使用这种方式声明的class都不会被编译成哈希字符串。 另外要说明一下，CSS Modules
 只会转换 class 名相关样式， id 选择器、伪类、标签选择器将不被转换，原封不动的出现在编译后的 css 中。
-```
+```javascript
 .link {
   color: green;
 }
@@ -171,7 +171,7 @@ module.exports = {
 
 对于样式复用，CSS Modules 只提供了唯一的方式来处理：`composes` 组合
 
-```
+```javascript
 /* components/Button.css */
 .base { /* 所有通用的样式 */ }
 
@@ -186,7 +186,7 @@ module.exports = {
 }
 ```
 
-```
+```javascript
 import styles from './Button.css';
 
 buttonElem.outerHTML = `<button class=${styles.normal}>Submit</button>`
@@ -194,7 +194,7 @@ buttonElem.outerHTML = `<button class=${styles.normal}>Submit</button>`
 ```
 生成的 HTML 变为
 
-```
+```javascript
 <button class="button--base-fec26 button--normal-abc53">Submit</button>
 ```
 
@@ -202,7 +202,7 @@ buttonElem.outerHTML = `<button class=${styles.normal}>Submit</button>`
 
 composes 还可以组合外部文件中的样式。
 
-```
+```javascript
 /* settings.css */
 .primary-color {
   color: #f40;

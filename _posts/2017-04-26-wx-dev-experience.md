@@ -34,7 +34,7 @@ tags:
     + app.js
     + app.json
     + app.wxss
-```
+```javascript
 
 小程序包含一个描述整体的app和多个描述各自的page，pages文件夹下面每一个文件夹即是一个页面的逻辑和页面实现；
 一个小程序主体部分由三个文件组成，必须在项目根目录，如下：
@@ -46,7 +46,7 @@ tags:
 | app.wxss | 否 | 小程序公共样式表 |
 
 一个小程序页面由4个文件组成，分别是：
- 
+
 | 文件类型 | 必填 | 作用 |
 | :----- | :-----: | :----- |
 | *.js | 是 | 页面逻辑 |
@@ -54,34 +54,34 @@ tags:
 | *.wxss | 否 | 页面样式表 |
 | *.json | 否 | 页面配置 |
 
-**注意：为了方便开发者减少配置项，规定描述页面的四个文件具有相同的路径与文件名** 
+**注意：为了方便开发者减少配置项，规定描述页面的四个文件具有相同的路径与文件名**
 
 <span id="H1-h2">WXML和WXSS简单介绍</span>
 * [WXML](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/)（WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统、可以构建出页面结构;
     * 数据绑定
-    
-    ```html
+
+    ```javascripthtml
         <!--wxml-->
         <view> {{message}} </view>
-    ```
-    
     ```javascript
+
+    ```javascriptjavascript
         //page.js
         page({
             data: {
                 message: 'Hello world'
             }
         })
-    ```
-    
+    ```javascript
+
     * 事件绑定
-    
-    ```html
+
+    ```javascripthtml
         <!--wxml-->
         <view bindtap="add"> {{count}} </view>
-    ```
-    
     ```javascript
+
+    ```javascriptjavascript
         //page.js
         Page({
           data: {
@@ -93,47 +93,47 @@ tags:
             })
           }
         })
-    ```
-    
+    ```javascript
+
 * [WXSS](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html) (WeiXin Style Sheets)是一套样式语言，用于描述WXML的组件样式。就类似web应用的css层叠样式表
     * 尺寸单位
         微信小程序除了可以使用css的单位px和相对位置百分比的方式，还使用了一种新的尺寸单位rpx，rpx（responsive pixel）： 可以根据宽度进行自适应，规定屏幕宽为750rpx; 如在iPhone6上，屏幕宽度为375px，共有750个物理像素，则750rpx=375px=750px，1rpx=0.5px=1物理像素。
         **详细可参考blog：**[微信小程序新单位rpx与自适应布局](http://www.cnblogs.com/babyzone2004/p/5979198.html)
-        
+
     * 样式导入
-    
-    ```css
+
+    ```javascriptcss
         /** common.wxss **/
        .small-p {
          padding:5px;
        }
-    ```
-    
-    ```css
+    ```javascript
+
+    ```javascriptcss
         /** app.wxss **/
         @import "common.wxss";
         .middle-p {
           padding:15px;
         }
-    ```
-    
+    ```javascript
+
     * 内联样式
         * style: 静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。
-        
-        ```html
+
+        ```javascripthtml
             <view style="color:{{color}};" />
-        ```
-        
+        ```javascript
+
         * class: 用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上.，样式类名之间用空格分隔。
-        
-        ```html
+
+        ```javascripthtml
             <view style="color:{{color}};" />
-        ```
-        
+        ```javascript
+
 <span id="H1-h3">app.json和page页面下的*.json简单配置</span>
 * app.json
     小程序使用`app.json`文件对微信小程序进行全局配置，决定页面文件对路径、窗口表现、设置网络超时时间、设置多tab等
-    
+
     | 属性 | 类型 | 必填 | 描述 |
     | :----- | :-----: | :-----: | :----- |
     | pages | String Array | 是 | 设置页面路径 |
@@ -146,7 +146,7 @@ tags:
     每一个小程序页面也可以使用.json文件来对本页面的窗口表现进行配置。 页面的配置比app.json全局配置简单得多，只是设置 app.json 中的 window 配置项的内容，页面中配置项会覆盖 app.json 的 window 中相同的配置项。
 
     页面的.json只能设置 window 相关的配置项，以决定本页面的窗口表现，所以无需写 window 这个键。
-    
+
     | 属性 | 类型 | 默认值 | 描述 |
     | :----- | :-----: | :-----: | :----- |
     | navigationBarBackgroundColor | HexColor | #000000 | 导航栏背景颜色，如"#000000" |
@@ -158,7 +158,7 @@ tags:
     | disableScroll | Boolean | false | 设置为 true 则页面整体不能上下滚动；只在 page.json 中有效，无法在 app.json 中设置该项 |
 
 **备注：** 详细的配置请参考官方[API](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html);
-    
+
 
 ### 小程序开发技术局限性和注意点
 
@@ -183,17 +183,17 @@ tags:
 <span id="H3">小程序开发过程中填坑指南</span>
 * 列表渲染问题
     微信小程序渲染列表方式：
-    
-        ```html
+
+        ```javascripthtml
             <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
                 {{idx}}: {{itemName.message}}
             </view>
-        ```
+        ```javascript
     在列表界面和数据实现双向绑定时，切记绑定wx：key属性，否则会出现数据和界面无法对应问题，关于wx：key 属性和多层嵌套列表参考[列表渲染多层嵌套循环及wx:key的使用--微信小程序入门教程](http://lanchenglv.com/article/2016/1124/wxapp_list_foreach.html)
 
 * 关于input的type属性
     建议设置该属性，且设置后赋值一定要正确，特别是该页面下多个input，否则可能引起真机下该input无法聚焦输入
-    
+
 * 关于网络请求状态>400处理
     微信小程序网络请求对400以上的状态码会当做请求成功处理，也因此微信小程序对于客户端session会话验证方式采用了一套自己的方式，关于微信session会话参考官方[API](https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html#wxloginobject), 这里建议在请求封装函数里面做一个对status>=400的特别处理以解决问题
 
@@ -202,19 +202,19 @@ tags:
 
 * 关于小程序事件冒泡
     小程序点击事件有和web开发类似的冒泡机制，这里可以去看[官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html)关于catchbind和bind的不同点, 以及关于事件参数target和currentTarget的区别，良好使用这些参数，可以更加灵活的使用小程序的事件冒泡机制。
-    
+
 * 关于小程序长按事件和单击事件的冲突
     微信小程序事件触发顺序:
     单击	touchstart → touchend → tap
     长按	touchstart → longtap → touchend → tap
     为了解决这个冲突，这里提供良好的解决方案解决问题，可看代码：
-    
-    ```html
+
+    ```javascripthtml
         // wxml
         <view bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindtap="bindTap">蹂躏我</view>
-    ```
-    
     ```javascript
+
+    ```javascriptjavascript
          // js
          bindTouchStart: function(e) {
             this.startTime = e.timeStamp;
@@ -229,8 +229,8 @@ tags:
                 console.log("点击")
              }
          }
-    ```
-    
+    ```javascript
+
 
 
 

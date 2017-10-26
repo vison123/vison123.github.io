@@ -28,7 +28,7 @@ tags:
 
 * 查看、添加、提交、删除、找回，重置修改文件
 
-```
+```javascript
 git add <file> # 将工作文件修改提交到本地暂存区
 
 git add . # 将所有修改过的工作文件提交暂存区
@@ -44,7 +44,7 @@ git revert HEAD # 恢复最后一次提交的状态
 
 * 查看文件diff
 
-```
+```javascript
 git diff <file> # 比较当前文件和暂存区文件差异 git diff
 
 git diff <id1><id1><id2> # 比较两次提交之间的差异
@@ -54,7 +54,7 @@ git diff <branch1>..<branch2> # 在两个分支之间比较
 ```
 * 查看提交记录
 
-```
+```javascript
 git log <file> # 查看该文件每次提交记录
 
 查看、切换、创建和删除分支
@@ -69,13 +69,13 @@ git br -D <branch> # 强制删除某个分支 (未被合并的分支被删除的
 ```
 * 分支合并和rebase
 
-```
+```javascript
 git merge <branch> # 将branch分支合并到当前分支
 ```
 
 * Git暂存管理
 
-```
+```javascript
 git stash # 暂存
 
 git stash list # 列所有stash
@@ -86,7 +86,7 @@ git stash drop # 删除暂存区
 ```
 * Git远程分支管理
 
-```
+```javascript
 git pull # 抓取远程仓库所有分支更新并合并到本地
 
 git fetch origin # 抓取远程仓库更新
@@ -109,7 +109,7 @@ git push origin :<remote_branch> #先删除本地分支(git br -d <branch>)，�
 
 * Git远程仓库管理
 
-```
+```javascript
 git remote -v # 查看远程服务器地址和仓库名称
 
 git remote show origin # 查看远程服务器仓库状态
@@ -125,7 +125,7 @@ git remote romove <repository> # 删除远程仓库
 ```
 * Git submodule
 
-```
+```javascript
 git submodule add https://github.com/vison123/vison123.github.io.git framework  # 添加 submodule
 
 git submodule update --init --recursive # 初始化 submodule 代码
