@@ -21,7 +21,7 @@ tags:
 * 缺陷：本质上是H5 依靠缓存等将会比web app的体验更好，但还在原生应用之下；张小龙的理念是做服务，用完即走，高频重要的应用显然不适合；
 
 <span id="H1-h1">文件结构</span>
-```
+```javascript
     + images
     + pages
       + 以*为名字的文件夹
@@ -34,7 +34,7 @@ tags:
     + app.js
     + app.json
     + app.wxss
-```javascript
+```
 
 小程序包含一个描述整体的app和多个描述各自的page，pages文件夹下面每一个文件夹即是一个页面的逻辑和页面实现；
 一个小程序主体部分由三个文件组成，必须在项目根目录，如下：
@@ -60,28 +60,28 @@ tags:
 * [WXML](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/)（WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统、可以构建出页面结构;
     * 数据绑定
 
-    ```javascripthtml
+    ```javascript
         <!--wxml-->
         <view> {{message}} </view>
-    ```javascript
+    ```
 
-    ```javascriptjavascript
+    ```javascript
         //page.js
         page({
             data: {
                 message: 'Hello world'
             }
         })
-    ```javascript
+    ```
 
     * 事件绑定
 
-    ```javascripthtml
+    ```javascript
         <!--wxml-->
         <view bindtap="add"> {{count}} </view>
-    ```javascript
+    ```
 
-    ```javascriptjavascript
+    ```javascript
         //page.js
         Page({
           data: {
@@ -93,7 +93,7 @@ tags:
             })
           }
         })
-    ```javascript
+    ```
 
 * [WXSS](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html) (WeiXin Style Sheets)是一套样式语言，用于描述WXML的组件样式。就类似web应用的css层叠样式表
     * 尺寸单位
@@ -102,33 +102,33 @@ tags:
 
     * 样式导入
 
-    ```javascriptcss
+    ```css
         /** common.wxss **/
        .small-p {
          padding:5px;
        }
-    ```javascript
+    ```
 
-    ```javascriptcss
+    ```css
         /** app.wxss **/
         @import "common.wxss";
         .middle-p {
           padding:15px;
         }
-    ```javascript
+    ```
 
     * 内联样式
         * style: 静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。
 
-        ```javascripthtml
-            <view style="color:{{color}};" />
         ```javascript
+            <view style="color:{{color}};" />
+        ```
 
         * class: 用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上.，样式类名之间用空格分隔。
 
-        ```javascripthtml
-            <view style="color:{{color}};" />
         ```javascript
+            <view style="color:{{color}};" />
+        ```
 
 <span id="H1-h3">app.json和page页面下的*.json简单配置</span>
 * app.json
@@ -184,11 +184,11 @@ tags:
 * 列表渲染问题
     微信小程序渲染列表方式：
 
-        ```javascripthtml
-            <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
-                {{idx}}: {{itemName.message}}
-            </view>
-        ```javascript
+    ```javascript
+        <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+            {{idx}}: {{itemName.message}}
+        </view>
+    ```
     在列表界面和数据实现双向绑定时，切记绑定wx：key属性，否则会出现数据和界面无法对应问题，关于wx：key 属性和多层嵌套列表参考[列表渲染多层嵌套循环及wx:key的使用--微信小程序入门教程](http://lanchenglv.com/article/2016/1124/wxapp_list_foreach.html)
 
 * 关于input的type属性
@@ -209,12 +209,12 @@ tags:
     长按	touchstart → longtap → touchend → tap
     为了解决这个冲突，这里提供良好的解决方案解决问题，可看代码：
 
-    ```javascripthtml
+    ```javascript
         // wxml
         <view bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindtap="bindTap">蹂躏我</view>
-    ```javascript
+    ```
 
-    ```javascriptjavascript
+    ```javascript
          // js
          bindTouchStart: function(e) {
             this.startTime = e.timeStamp;
@@ -229,7 +229,7 @@ tags:
                 console.log("点击")
              }
          }
-    ```javascript
+    ```
 
 
 
