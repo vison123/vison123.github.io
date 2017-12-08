@@ -17,17 +17,17 @@ SpringMVC 用的是 的MultipartFile来进行文件上传 所以我们首先要�
 * maxUploadSize="5400000" 是上传文件的大小，单位为字节
 * uploadTempDir="fileUpload/temp" 为上传文件的临时路径
 
-{% highlight bash %}
+```html
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="utf-8" />
         <property name="maxUploadSize" value="10485760" />
         <property name="maxInMemorySize" value="4096" />
         <property name="resolveLazily" value="true" />
 </bean>
-{% endhighlight %}
+```
 
 后端controller实现，仅支持POST请求，并过滤header中的content-type=multipart/*
-{% highlight bash %}
+```java
 @Controller
 @RequestMapping("/Api")
 public class ImportExcelController {
@@ -53,14 +53,14 @@ public class ImportExcelController {
         dataImportService.importSingleExcel("bankTransaction", "bankTransaction", file);
     }
 }
-{% endhighlight %}
+```
 
 ### 前端测试
 
 注意要在form标签中加上enctype="multipart/form-data"表示该表单是要处理文件的,这是最基本的东西
 如果需要多选，只需多个type="file"的input即可
 
-{% highlight bash %}
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,5 +75,26 @@ public class ImportExcelController {
   </form>
 </body>
 </html>
-{% endhighlight %}
+```
 
+### Ant Design Upload
+
+```javascript
+  <Upload
+    action={baseUrl + api.groupmaintain.importExcel}
+    onChange={this._uploadExcel}
+    accept='multipart/form-data'
+    name='excelFile'
+    data={{
+      smsGroupId: smsGroupId.smsGroupId,
+      accessToken: userInfo && userInfo.accessToken
+    }}
+  >
+    <Button
+      type='primary'
+      size='large'
+    >
+      导入excel
+    </Button>
+  </Upload>
+```

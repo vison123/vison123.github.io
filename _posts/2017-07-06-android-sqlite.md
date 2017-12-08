@@ -20,14 +20,14 @@ Android提供了SQLiteOpenHelper工具类，只需要新建一个类继承SQLite
 为了以后数据库升级和App各版本兼容考虑，onCreate方法中应该只有第一个稳定版本的数据库建表语句，然后调用onUpgrade方法升级到当前数据库版本。
 数据库的升级代码都应该在onUpgrade方法中，这样可以保证用户无论安装任何版本都会从基础数据库开始升级，直至升级到当前版本。
 
-{% highlight bash %}
+```java
 public class SqLiteHelper extends SQLiteOpenHelper {
 
 
     private static final String DATABASE_NAME  = "finance.db"; //数据库名称
 
     private static final int FIRST_DATABASE_VERSION  = 1; //初始数据库版本
-    
+
     private static final int DATABASE_VERSION  = 3; //当前数据库版本
 
     public SqLiteHelper(Context context) {
@@ -65,13 +65,13 @@ public class SqLiteHelper extends SQLiteOpenHelper {
         db.execSQL(DbCategory.CREATE_CATEGORY_TABLE);
         db.execSQL(DbMoney.CREATE_MONEY_TABLE);
     }
-    
+
     private void upgradeToVersion2(SQLiteDatabase db){
         // Project表新增1个字段
         String sql = "ALTER TABLE " + DbProject.DATABASE_TABLE_PROJECT + " ADD COLUMN is_deleted VARCHAR";
         db.execSQL(sql);
     }
-    
+
      private void upgradeToVersion3(SQLiteDatabase db){
         // Category表新增1个字段
         String sql = "ALTER TABLE " + DbCategory.DATABASE_TABLE_CATEGORY + " ADD COLUMN is_deleted VARCHAR";
@@ -79,7 +79,7 @@ public class SqLiteHelper extends SQLiteOpenHelper {
     }
 
 }
-{% endhighlight %}
+```
 
 ### 升级数据库
   数据库升级主要有两种情况：
@@ -92,7 +92,7 @@ public class SqLiteHelper extends SQLiteOpenHelper {
 
 ### 备份数据库
    如果遇到复杂的修改操作，比如在修改的同时，需要进行数据的转移，那么可以采取在一个事务中执行如下语句来实现修改表的需求。
-   
+
    * 将表名改为临时表
          ALTER TABLE t_project RENAME TO t_temp_project;
 
@@ -105,8 +105,8 @@ public class SqLiteHelper extends SQLiteOpenHelper {
 　　
    * 删除临时表　　
         DROP TABLE t_temp_project;
-        
+
 通过以上四个步骤，就可以完成旧数据库结构向新数据库结构的迁移，并且其中还可以保证数据不会应为升级而流失。
-  
+
 ### 提升数据库版本号
   数据库版本若没有提升到最新，下次启动应用还会进行升级，影响效率及对数据库数据造成影响

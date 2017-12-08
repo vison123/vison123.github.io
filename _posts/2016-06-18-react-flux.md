@@ -16,7 +16,7 @@ tags:
 
 ### Flux框架的结构
 主要有以下四大组成部分：
-{% highlight bash %}
+```javascript
  View(视图层)： 界面显示，业务逻辑;
 
  Action(动作)：视图层发出的消息(比如mouseClick);
@@ -24,7 +24,7 @@ tags:
  Dispatcher(转发器)：用来接收Actions、执行回调函数;
 
  Store(数据层)：用来存放应用的状态，一旦发生变动，就提醒Views要更新页面;
-{% endhighlight %}
+```
 
 
 ![](http://img.blog.csdn.net/20160823082435287?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
@@ -52,7 +52,7 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
 
 整个完整流程主要有以下几个步骤：
 
-{% highlight bash %}
+```javascript
  View触发一个方法产生一个Action
 
  Dispatcher 收到 Action，要求 Store 进行相应的更新
@@ -60,7 +60,7 @@ Flux最大的特点就是单项数据流，不同View之间的数据不会相互
  Store 更新后，发出一个"change"事件
 
  View 收到"change"事件后，更新页面
-{% endhighlight %}
+```
 
 ### 优缺点
 没有哪一种模式是完美的，只是看牺牲了哪些性能又带来了哪些便利。Flux也不例外，也有一些优缺点：
