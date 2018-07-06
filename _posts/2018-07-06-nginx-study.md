@@ -13,6 +13,41 @@ tags:
 最近在开发Vue实现服务端渲染的时候，需要使用Nginx验证一下其部署方案的可行性，果断本地
 部署了一套验证一下，在此做一下记录
 
+### Nginx安装（MacOS）
+
+* 安装（可以用 brew 安装）
+
+```javascript
+$ sudo brew install nginx
+```
+
+* 查看 nginx 版本
+```javascript
+$ nginx -v
+```
+
+* 启动 nginx
+```
+$ sudo nginx
+```
+
+* 查看 nginx 是否启动成功
+
+在浏览器中访问 http://localhost:8080
+如果出现如下界面，则说明启动成功.
+
+* 可能遇到的问题
+
+```javascript
+ // 端口被占用
+ nginx: [emerg] bind() to 0.0.0.0:8080 failed (48: Address already in use)
+ 解决方法：修改 nginx.conf 文件里的端口号
+
+ // 权限不够
+ nginx: [alert] could not open error log file: open() “/usr/local/var/log/nginx/error.log” failed (13: Permission denied)
+ 解决方法：在命令前加上 sudo
+```
+
 ### Nginx常用命令
 
 ```javascript
@@ -161,7 +196,7 @@ server {
 
 web应用默认端口80端口，所以生产环境多个web应用对应多个域名，都要访问80端口才能实现。
 Nginx反向代理就可以解决这个问题，这也是Nginx很重要的一个功能。在上面配置的基础上进行修改，
-只需要修改nginx.conf即可
+只需要修改nginx.conf即可。ps：a.visonsoft.cn、b.visonsoft.cn两个域名是通过修改hosts文件本地模拟的.
 
 * nginx.conf配置
 
@@ -192,5 +227,11 @@ http {
 ...
 
 ```
+* 可能遇到的问题
 
-ps：a.visonsoft.cn、b.visonsoft.cn两个域名是通过修改hosts文件本地模拟的.
+```javascript
+nginx: [emerg] bind() to 0.0.0.0:80 failed (13: Permission denied)
+```
+原因：应用端口小于1024需要以root权限启动
+
+解决方法：sudo -i && nginx
