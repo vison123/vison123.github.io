@@ -42,7 +42,7 @@ nginx -t -c /path/to/nginx.conf 测试nginx配置文件是否正确
 
 * nginx.conf配置
 
-```
+```javascript
 #user  nobody;
 worker_processes  2;
 
@@ -105,7 +105,7 @@ http {
 
 * web.conf配置
 
-```
+```javascript
 server {
     listen       8081;
     server_name  localhost;
@@ -132,7 +132,7 @@ server {
 
 * mobile.conf配置
 
-```
+```javascript
 server {
     listen       8082;
     server_name  localhost;
@@ -165,7 +165,7 @@ Nginx反向代理就可以解决这个问题，这也是Nginx很重要的一个�
 
 * nginx.conf配置
 
-```
+```javascript
 ...
 
 http {
