@@ -6,7 +6,7 @@ header-img: "img/post-bg-rwd.jpg"
 author:     "Vison"
 catalog: true
 tags:
-    - React
+    - Nginx
 ---
 
 
