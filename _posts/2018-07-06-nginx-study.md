@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Nginx学习笔记
-date:   2018-03-05 01:08:00 +0800
+date:   2018-07-06 01:08:00 +0800
 header-img: "img/post-bg-rwd.jpg"
 author:     "Vison"
 catalog: true
