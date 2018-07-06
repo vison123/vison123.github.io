@@ -22,12 +22,14 @@ $ sudo brew install nginx
 ```
 
 * 查看 nginx 版本
+
 ```javascript
 $ nginx -v
 ```
 
 * 启动 nginx
-```
+
+```javascript
 $ sudo nginx
 ```
 
@@ -35,6 +37,7 @@ $ sudo nginx
 
 在浏览器中访问 http://localhost:8080
 如果出现如下界面，则说明启动成功.
+![](/img/in-post/nginx-success.png)
 
 * 可能遇到的问题
 
