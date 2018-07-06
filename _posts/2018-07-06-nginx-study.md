@@ -15,7 +15,7 @@ tags:
 
 ### Nginx常用命令
 
-```
+```javascript
 nginx: 启动nginx
 nginx -c /path/to/nginx.conf: 启动nginx
 nginx -s reload: 修改配置后重新加载生效
