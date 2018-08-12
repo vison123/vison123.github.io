@@ -1,3 +1,15 @@
+---
+layout: post
+title:  前端面试题汇总
+date:   2018-07-30 01:08:00 +0800
+header-img: "img/post-bg-rwd.jpg"
+author:     "Vison"
+catalog: true
+tags:
+    - CSS
+    - JS
+---
+
 1、垂直居中？
 
 2、清除浮动？
