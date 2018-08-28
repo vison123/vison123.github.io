@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SpringMVC 上传文件
+title:  MultipartFile 上传文件
 date:   2017-06-07 01:08:00 +0800
 header-img: "img/post-bg-rwd.jpg"
 author:     "Vison"
@@ -97,4 +97,26 @@ public class ImportExcelController {
       导入excel
     </Button>
   </Upload>
+```
+
+### Element ui Upload
+
+```javascript
+  <el-upload
+      v-if="defaultIndex === 0"
+      style="display: inline-block;"
+      :action="baseURL + '/car_alarm/import'"
+      :on-success="handleSuccess"
+      :on-error= "handleError"
+      :on-progress="handleProgress"
+      :with-credentials="true"
+      :limit="1"
+      :before-upload="handleBeforeUpload"
+      ref="uploadFileMobile"
+      accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      :file-list="fileList"
+      :show-file-list="false"
+    >
+      <span class="reset-btn" style="width: 120px;" >{{ this.lang.IMPORT_CAR}}</span>
+    </el-upload>
 ```
