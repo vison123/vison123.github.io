@@ -21,7 +21,7 @@ Vue + Element管理后台项目需要用到换肤功能，指定多个主题色�
 获取theme-chalk的css文件，根据主题色动态生成相关颜色，利用正则表达式替换后动态生成style。
 由于根据Element-ui的版本号网络请求获取css比较耗时，`https://unpkg.com/element-ui@${version}/lib/theme-chalk/index.css`，
 后面改成用字符串维护在js中，加快换肤速度。
-```javascript 1.8
+```javascript
 <template>
   <el-color-picker
     v-model="theme"
@@ -214,10 +214,10 @@ Vue + Element管理后台项目需要用到换肤功能，指定多个主题色�
 
 ```
 
-###自定义组件及页面换肤
+#### 自定义组件及页面换肤
 
 页面自定义颜色通过在body上面添加class 控制颜色的变化
-```javascript 1.8
+```javascript
    // 自定义样式主题覆盖
    let index = this.getArrayIndexByValue(this.themeArr, theme)
    document.body.classList = []
