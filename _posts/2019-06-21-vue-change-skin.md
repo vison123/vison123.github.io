@@ -538,5 +538,14 @@ $--theme-color-1-menu-active: #07409b;
   }
 }
 ```
+
+#### 换肤效果
+
+换肤完成后效果如下：
+
+ ![](/img/in-post/post-vue-change-skin/skin1.png)
+ 
+ ![](/img/in-post/post-vue-change-skin/skin2.png)
+ 
 ### 参考资料
 [](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/ThemePicker/index.vue)
