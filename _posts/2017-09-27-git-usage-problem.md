@@ -131,3 +131,13 @@ git submodule add https://github.com/vison123/vison123.github.io.git framework  
 git submodule update --init --recursive # 初始化 submodule 代码
 
 ```
+
+* Git revert remote commit
+
+```javascript
+git reset <commit number> --hard  # 本地回退commit点
+
+git push --force    # 强制push到线上仓库
+
+```
+
