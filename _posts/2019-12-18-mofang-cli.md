@@ -344,7 +344,7 @@ $ mofang-cli create my-project
 
 ### 发布
 
-参考[npm发布项目](https://wenku.baidu.com/view/b25ff654f01dc281e53af089.html)
+参考[npm发布项目](http://visonsoft.cn/2017/10/17/npm-usage/)
 
 ### 使用
 
