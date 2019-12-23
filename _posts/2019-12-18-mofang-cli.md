@@ -331,7 +331,7 @@ exec('npm install', (error, stdout, stderr) => {
 				})
 ```
 
-#### 调试
+### 调试
 
 编码完成后，可以在项目目录下使用npm link命令进行本地连调, 无需发到线上
 
@@ -342,16 +342,17 @@ $ sudo npm link
 $ mofang-cli create my-project
 ```
 
-#### 发布
+### 发布
 
 参考[npm发布项目](https://wenku.baidu.com/view/b25ff654f01dc281e53af089.html)
 
-#### 使用
+### 使用
 
 ![](/img/in-post/mofang-cli-usage.png)
 
-#### 参考资料
+### 参考资料
 
-[项目地址](https://github.com/mofang-cli/mofang-cli)
-[npm地址](https://www.npmjs.com/package/mofang-cli)
+* [项目地址](https://github.com/mofang-cli/mofang-cli)
+
+* [npm地址](https://www.npmjs.com/package/mofang-cli)
 
