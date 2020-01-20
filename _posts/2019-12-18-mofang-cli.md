@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  从零开始搭建前端脚手架cli
-date:   2019-07-18 01:08:00 +0800
+date:   2019-12-18 01:08:00 +0800
 header-img: "img/post-bg-rwd.jpg"
 author:     "Vison"
 catalog: true
