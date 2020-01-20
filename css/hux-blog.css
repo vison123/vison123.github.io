@@ -1,3 +1,8 @@
+.post-container {
+  background-size: 20px 20px;
+  background: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%) center center;
+}
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -179,7 +184,7 @@
     Multi-line snackbar height: 80 dp
     Text: Roboto Regular 14 sp
     Action button: Roboto Medium 14 sp, all-caps text
-    Default background fill: #323232 100%  
+    Default background fill: #323232 100%
   */
     left: 0px;
     right: 0px;
